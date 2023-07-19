@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial';
+}
+
+.img-set {
+    height: 90vh !important;
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.outerCol {
+    text-align: end;
+}
+
+.heading {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 3rem 0;
+}
+
+.inputText {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputText>input {
+    margin-top: 1rem;
+    border-radius: 27px;
+    margin-bottom: 1rem;
+}
+
+.btn-custom {
+    background-color: #0F2743 !important;
+    color: white !important;
+    border-radius: 30px !important;
+    padding: 0.5rem 2rem !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    align-items: center;
+}
+
+.header .img-round {
+    border: 1px solid #000;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.header .img-round .img-noti {
+    width: 1.5rem;
+}
+
+.homeHeading {
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.SubHeading {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.box {
+    background-color: #D9D9D9;
+    padding: 1rem 4rem;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.box-row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-margin {
+    display: grid;
+    justify-content: center;
+}
+
+.secondfloor {
+    margin: 0 !important;
+}
+
+.box-padding {
+    padding-bottom: 5rem;
+}
+
+.particularHeading {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.form-check-input[type="checkbox"] {
+    display: none;
+}
+
+.form-check-input[type="checkbox"]+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.form-check-input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+.new-input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 0px;
+}
+.form-check-input[type="checkbox"]:checked+label::before {
+    background-color: transparent;
+    border-color: #000;
+}
+
+.form-check-input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 45%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    border-color: #000;
+}
+
+.form-check-input[type="checkbox"]+label span {
+    position: relative;
+    z-index: 1;
+}
+
+.descrption-text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.para{
+    text-align: justify;
+}
+.btn-start{
+    background-color: #D9D9D9;
+    padding: 0.5rem 0;
+}
+.Send-btn{
+    margin-top: 6rem;
+    margin-left: -2rem;
+    background-color: #000000 !important;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #fff;
+}
+.table {
+    border: none !important;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.table td, .table th {
+    border: none !important;
+    padding: 0.75rem 0 !important;
+}
+
+.bg-td {
+    background-color: #822828;
+    padding: 0.5rem 2rem;
+    color: #fff;
+}
+
+.admin-img-set {
+    width: 30px;
+}
+
+@media (max-width: 767px) {
+    .bg-td {
+        font-size: 0.8rem;
+        padding: 0;
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .outerCol {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .colPostMargin {
+        display: grid;
+        justify-content: center;
+    }
+    .Send-btn{
+        margin-top:1rem;
+        margin-left: 0;
+    }
+    .margin-it{
+        margin-top: 1rem;
+    }
+    
+}
+
