@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./../../assets/css/style.css">
+    <link rel="stylesheet" href="./../../assets/css/calander.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.ibu.edu.ba/favicon-32x32.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-md-12 header">
+                <div class="dropdown">
+                    <img src="./../../assets/images/header_img.svg" alt="header image" class="img img-fluid" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <button class="btn btn-danger btn-block" onclick="logOut()">LogOut</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="img-round">
+                        <div class="dropdown">
+                            <img src="./../../assets/images/icon/notification.svg"
+                                class="img img-fluid img-noti dropdown-toggle" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <h5 class="text-center">Notifications</h5>
+                                <div class="text-center">
+                                    <img src="./../../assets/images/noti-icon.svg" alt="noti-icon" class="img img-fluid w-25">
+                                </div>
+                                <hr class="mt-2">
+                                <div class="text-center" id="textDown">
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="classRoomDetails">
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p class="margin-it">Reservations</p>
+                <p>First, choose a date.</p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="calendar">
+                    <div class="month">
+                        <a href="#" class="nav"><i class="fas fa-angle-left"></i></a>
+                        <div id="currentMonthYear">January <span class="year">2019</span></div>
+                        <a href="#" class="nav"><i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <div class="days">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                    <div class="dates" id="calendarDates">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add this HTML structure where you want to display the buttons -->
+        <div class="row mt-5">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p>Then, choose time.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <button class="btn-start btn-block" data-target="#startTimeModal" data-toggle="modal">Start
+                    time</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <button class="btn-start btn-block" data-target="#endTimeModal" data-toggle="modal">End time</button>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 send-btn-mobile">
+                <button class="Send-btn btn-block">SEND</button>
+            </div>
+        </div>
+
+        <!-- Add this modal for start time -->
+        <div class="modal fade" id="startTimeModal" tabindex="-1" role="dialog" aria-labelledby="startTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="startTimeModalLabel">Enter Start Time</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="time" id="startTimeInput" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveStartTimeBtn"
+                            data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add this modal for end time -->
+        <div class="modal fade" id="endTimeModal" tabindex="-1" role="dialog" aria-labelledby="endTimeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="endTimeModalLabel">Enter End Time</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="time" id="endTimeInput" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveEndTimeBtn"
+                            data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script src="./../../assets/js/main.js"></script>
+    <script src="./../../assets/js/fetchDataClassRoom.js"></script>
+    <script src="./../../assets/js/storedRecordIndatabase.js"></script>
+    <script src="./../../assets/js/notification.js"></script>
+</body>
+
+</html>

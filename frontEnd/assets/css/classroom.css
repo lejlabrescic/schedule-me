@@ -1,0 +1,22 @@
+.classroom-title {
+    padding-top: 3rem;
+    font-weight: bolder;
+}
+
+.classroom-floor {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.classroom-number {
+    background-color: lightgray;
+    border-radius: 1rem;
+    text-align: center;
+    height: 5rem;
+    padding-top: 1.2rem;
+    cursor: pointer;
+}
+
+.classroom * {
+    box-sizing: border-box;
+}

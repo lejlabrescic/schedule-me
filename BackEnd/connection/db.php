@@ -5,6 +5,7 @@ function getDatabaseConnection() {
     $username = 'root';
     $password = '';
     $database = 'schoolkindweb';
+
     $db = new mysqli($host, $username, $password, $database);
     if ($db->connect_errno) {
         die("Failed to connect to MySQL: " . $db->connect_error);

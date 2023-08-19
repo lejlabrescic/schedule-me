@@ -52,15 +52,6 @@ $(document).ready(function () {
         }
         generateCalendar(currentYear, currentMonth);
     });
-    $(document).on('click', '.date-container button', function() {
-        var selectedDate = parseInt($(this).find('time').text(), 10);
-        var selectedMonth = currentDate.getMonth() + 1; 
-        var selectedYear = currentDate.getFullYear();
-
-        console.log('Selected Date: ' + selectedDate);
-        console.log('Selected Month: ' + selectedMonth);
-        console.log('Selected Year: ' + selectedYear);
-    });
     var currentDate = new Date();
     generateCalendar(currentDate.getFullYear(), currentDate.getMonth());
 });

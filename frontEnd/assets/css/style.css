@@ -192,15 +192,17 @@
 }
 
 .bg-td {
-    background-color: white;
+    background-color: #822828;
     padding: 0.5rem 2rem;
-    color: black;
+    color: #fff;
 }
 
 .admin-img-set {
     width: 30px;
 }
-
+.title{
+    text-align: center !important;
+}
 @media (max-width: 767px) {
     .bg-td {
         font-size: 0.8rem;
